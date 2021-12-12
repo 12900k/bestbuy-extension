@@ -1,0 +1,24 @@
+{
+"update_url": "https://clients2.google.com/service/update2/crx",
+
+    "manifest_version": 2,
+    "name": "ws BestBuy Extension",
+    "short_name": "ws bb Extension",
+    "description": "Renew Queue Timer",
+    "version": "1.0.0",
+    "homepage_url": "https://www.bestbuy.com/",
+    "permissions": [],
+    "content_scripts": [
+        {
+            "run_at": "document_start",
+            "matches": ["https://*.bestbuy.com/*"],
+            "js": [
+                "contentScript.js"
+            ]
+        }
+    ],
+    "web_accessible_resources": ["injected.js"],
+    "browser_action": {
+        "default_popup": "popup.html"
+    }
+}
